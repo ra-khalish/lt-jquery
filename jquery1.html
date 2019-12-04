@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Pengenalan</title>
+        <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+    </head>
+
+    <body>
+        <div class="element-spesial">Hallo saya element spesial</div>
+
+        <button id="tombol-hide">Hide</button>
+        <button class="tombol-show">Show</button>
+
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("#tombol-hide").click(function(){
+                    $(".element-spesial").hide();
+                });
+                $(".tombol-show").click(function(){
+                    $(".element-spesial").show();
+                });
+            });
+        </script>
+    </body>
+</html>
