@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Attr - Remove attr</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+
+    <style>
+        #boxHijau {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="tambah_attribute">Tambah Attribute Id</button>
+    <button class="hilangkan_attribute">Hilangkan attribute Id</button>
+    <button class="dapatkan_nilai">dapatkan Nilai Attribute Id</button>
+    <hr />
+
+    <div class="box">Ini adalah element yang attributnya akan di manipulasi</div>
+
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".tambah_attribute").click(function () {
+                $(".box").attr("id", "boxHijau");
+            });
+            $(".hilangkan_attribute").click(function () {
+                $(".box").removeAttr("id");
+            });
+
+            $(".dapatkan_nilai").click(function () {
+                var nilaiId = $(".box").attr("id");
+                alert(nilaiId);
+            });
+        });
+    </script>
+</body>
+
+</html>
