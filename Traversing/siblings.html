@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sibling</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <ul>
+        <li>List ke 1</li>
+        <li class="kedua">List ke 2</li>
+        <li>List ke 3</li>
+        <li>List ke 4</li>
+        <li class="kelima">List ke 5</li>
+        <li>List ke 6</li>
+        <li>List ke 7</li>
+    </ul>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("li.kedua").siblings(".kelima").html("Ini siblings dari class kedua");
+        });
+    </script>
+</body>
+
+</html>
