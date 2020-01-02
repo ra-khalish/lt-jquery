@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Animate</title>
+    <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+
+    <style type="text/css">
+        .box {
+            position: absolute;
+            background: green;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            kotak_animasi();
+        });
+
+        function kotak_animasi() {
+            $(".box").animate({
+                left: "+=150",
+                opacity: 0.5
+            }, 1000, callback_kotakanimasi);
+        }
+
+        function callback_kotakanimasi() {
+            $(this).animate({
+                opacity: 1,
+                left: "-=150"
+            }, 1000, kotak_animasi);
+        }
+    </script>
+</body>
+
+</html>
